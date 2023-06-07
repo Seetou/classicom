@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --primary-clr: #eb5e55;
+  --secondary-clr: #f2b645;
+  --primary-btn-clr: #eb5e55;
+  --primary-btn-clr-shade: #d4554d;
+  --secondary-btn-clr: #000;
+  --header-background-clr: #fbf8fd;
+}
+
+body {
+  font-size: 62.5%;
+  position: relative;
+}
+
+section {
+  width: 100vw;
+  max-width: 100%;
+}
+
+.--inner-container {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.react-icons {
+  vertical-align: middle;
+}
