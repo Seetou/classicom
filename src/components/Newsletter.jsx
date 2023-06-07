@@ -89,6 +89,8 @@ const NewsletterContainer = styled.section`
       rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 
     .newsletter__header {
+      max-width: 80%;
+      margin: 0 auto;
       h2 {
         font-size: 2rem;
         color: #000;
@@ -133,6 +135,26 @@ const NewsletterContainer = styled.section`
         span {
           display: flex;
           align-items: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 31.25em) {
+    .newsletter__container {
+      .newsletter__header {
+        p {
+          text-align: center;
+        }
+      }
+
+      .newsletter__form {
+        input {
+          padding: 0.5rem;
+          width: 50%;
+          outline: none;
+          border-radius: 15px;
+          border: none;
         }
       }
     }

@@ -28,5 +28,10 @@ const HeadingContainer = styled.div`
 
   @media (max-width: 56.25em) {
     max-width: 60%;
+    margin: 2rem auto;
+  }
+
+  @media (max-width: 31.25em) {
+    max-width: 80%;
   }
 `;

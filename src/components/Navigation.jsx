@@ -43,7 +43,7 @@ const NavigationContainer = styled.header`
     justify-content: flex-start;
     gap: 4rem;
     .header__logo__container {
-      width: 200px;
+      width: 20%;
       img {
         width: 100%;
       }

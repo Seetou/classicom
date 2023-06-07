@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { footerLinks } from "../Datas/links";
 
@@ -13,7 +14,9 @@ const Footer = () => {
             <div className="footer__liens">
               <ul>
                 {footerLinks.map((link) => (
-                  <li key={link.id}>{link.page}</li>
+                  <li key={link.id}>
+                    <NavLink to={link.link}>{link.page}</NavLink>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -58,6 +61,15 @@ const FooterContainer = styled.footer`
           li {
             list-style: none;
             font-size: 1rem;
+
+            a {
+              text-decoration: none;
+              color: #000;
+
+              &:hover {
+                color: #eb5e55;
+              }
+            }
           }
         }
 

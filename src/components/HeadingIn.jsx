@@ -26,4 +26,8 @@ const HeadingContainer = styled.div`
     font-size: 1.2rem;
     font-weight: 200;
   }
+
+  @media (max-width: 43.75em) {
+    text-align: center;
+  }
 `;

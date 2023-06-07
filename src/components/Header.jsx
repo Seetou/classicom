@@ -75,4 +75,33 @@ const HeaderContainer = styled.section`
       width: 100%;
     }
   }
+
+  @media (max-width: 50em) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header__container {
+      .header__main__title__container {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 31.25em) {
+    .header__container {
+      .header__main__title__container {
+        .header__main__title {
+          font-size: 2.5rem;
+        }
+
+        .header__subtitle {
+          font-size: 1.5rem;
+          font-weight: 400;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
 `;
