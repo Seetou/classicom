@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "../../styles/colors";
 
 const Card = ({ image, title, content, link }) => {
   return (
@@ -63,6 +64,8 @@ const CardContainer = styled.article`
         word-break: normal;
         margin: 1rem 0;
         max-width: 35rem;
+        color: ${COLORS.lightBlackColor};
+        font-weight: 300;
       }
     }
 
@@ -72,14 +75,14 @@ const CardContainer = styled.article`
         text-decoration: none;
         font-size: 0.75rem;
         font-weight: bold;
-        background: #f2b645;
+        background: ${COLORS.secondaryColor};
         color: #000;
         padding: 0.3rem 1rem;
         border-radius: 100px;
         transition: all 0.3s ease-in-out;
 
         &:hover {
-          background: #daa43e;
+          background: ${COLORS.secondaryColorDarker};
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
       }

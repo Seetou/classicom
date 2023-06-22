@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "../../styles/colors";
 import headerImage from "../assets/images/happy_student.webp";
 
 const Header = () => {
@@ -48,7 +49,8 @@ const HeaderContainer = styled.section`
 
       .header__subtitle {
         font-size: 1.5rem;
-        font-weight: 400;
+        font-weight: 200;
+        color: ${COLORS.lightBlackColor};
       }
 
       .header__button {
@@ -58,13 +60,13 @@ const HeaderContainer = styled.section`
           text-decoration: none;
           color: #fff;
           font-size: 1.2rem;
-          background-color: #eb5e55;
+          background-color: ${COLORS.primaryColor};
           padding: 1rem 3rem;
           border-radius: 100px;
           font-weight: bold;
           transition: all 0.3s ease-in-out;
           &:hover {
-            background: #d4554d;
+            background: ${COLORS.primaryColorDarker};
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           }
         }

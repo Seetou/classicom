@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "../../styles/colors";
 
 const HeadingIn = ({ title, subtitle }) => {
   return (
@@ -19,12 +20,13 @@ const HeadingContainer = styled.div`
   margin-bottom: 2rem;
   .heading__title {
     font-size: 2rem;
-    color: #eb5e55;
+    color: ${COLORS.primaryColor};
   }
 
   .heading__subtitle {
     font-size: 1.2rem;
-    font-weight: 200;
+    font-weight: 400;
+    color: ${COLORS.lightBlackColor};
   }
 
   @media (max-width: 43.75em) {

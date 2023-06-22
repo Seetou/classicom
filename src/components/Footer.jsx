@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { footerLinks } from "../Datas/links";
+import { COLORS } from "../../styles/colors";
 
 const Footer = () => {
   return (
@@ -43,7 +44,7 @@ const FooterContainer = styled.footer`
   width: 100vw;
   max-width: 100%;
   .footer__container {
-    background: #fbf8fd;
+    background: ${COLORS.headerBackgroundColor};
     .footer {
       margin: 0 auto;
 
@@ -64,10 +65,10 @@ const FooterContainer = styled.footer`
 
             a {
               text-decoration: none;
-              color: #000;
+              color: ${COLORS.lightBlackColor};
 
               &:hover {
-                color: #eb5e55;
+                color: ${COLORS.primaryColor};
               }
             }
           }
@@ -87,7 +88,7 @@ const FooterContainer = styled.footer`
   }
 
   .footerBottom__container {
-    background: #eb5e55;
+    background: ${COLORS.primaryColor};
     padding: 2rem 0;
     .footer {
       margin: 0 auto;

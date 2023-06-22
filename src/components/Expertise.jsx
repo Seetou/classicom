@@ -1,5 +1,6 @@
 import React from "react";
 import HeadingIn from "./HeadingIn";
+import { COLORS } from "../../styles/colors";
 import styled from "styled-components";
 import musicien from "../assets/images/musicien-guitarist.webp";
 import { FaCheckCircle } from "@react-icons/all-files/fa/FaCheckCircle";
@@ -12,7 +13,7 @@ const Expertise = () => {
           <HeadingIn
             title={"Pourquoi nous faire confiance ?"}
             subtitle={
-              "Notre équipe est composée de musiciens professionnels, talentueux et passionnés."
+              "Notre équipe est composée de musiciens professionnels, talentueux et passionnés afin de vous garantir une entière satisfaction."
             }
           />
           <div className="expertise__content__paragraph">
@@ -32,13 +33,13 @@ const Expertise = () => {
                 <span>
                   <FaCheckCircle />
                 </span>
-                Avantage 1
+                Un service de qualité
               </li>
               <li>
                 <span>
                   <FaCheckCircle />
                 </span>
-                Avantage 2
+                Un accompagnement personnalisé
               </li>
               <li>
                 <span>
@@ -94,7 +95,7 @@ const ExpertiseContainer = styled.section`
           margin-bottom: 0.75rem;
 
           span {
-            color: #eb5e55;
+            color: ${COLORS.primaryColor};
             margin-right: 0.75rem;
           }
         }
@@ -107,14 +108,14 @@ const ExpertiseContainer = styled.section`
           text-decoration: none;
           font-size: 0.75rem;
           font-weight: bold;
-          background: #f2b645;
+          background: ${COLORS.secondaryColor};
           color: #000;
           padding: 1rem 3rem;
           border-radius: 100px;
           transition: all 0.3s ease-in-out;
 
           &:hover {
-            background: #daa43e;
+            background: ${COLORS.secondaryColorDarker};
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           }
         }
@@ -128,7 +129,7 @@ const ExpertiseContainer = styled.section`
       img {
         width: 100%;
         border-radius: 100px;
-        border-right: 3px solid #eb5e55;
+        border-right: 3px solid ${COLORS.primaryColor};
         object-fit: cover;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
           rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;

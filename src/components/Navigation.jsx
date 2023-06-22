@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { navlinks } from "../Datas/navlinks";
+import { COLORS } from "../../styles/colors";
 
 const Navigation = () => {
   return (
@@ -60,7 +61,7 @@ const NavigationContainer = styled.header`
           list-style: none;
           a {
             font-size: 1rem;
-            color: #000;
+            color: ${COLORS.lightBlackColor};
             font-weight: bold;
             text-decoration: none;
             transition: all 0.3s ease-in-out;
@@ -68,7 +69,7 @@ const NavigationContainer = styled.header`
 
             &.active,
             &:hover {
-              color: #d4554d;
+              color: ${COLORS.primaryColorDarker};
               opacity: 1;
             }
           }
