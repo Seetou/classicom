@@ -18,7 +18,7 @@ const Header = () => {
           </h2>
           {/* BUTTON */}
           <div className="header__button">
-            <a href="#">Découvrir</a>
+            <a href="/">Découvrir</a>
           </div>
         </div>
         {/* <div className="header__adjust__box"></div> */}
@@ -92,6 +92,7 @@ const HeaderContainer = styled.section`
   }
 
   @media (max-width: 31.25em) {
+    padding: 30rem 0;
     .header__container {
       .header__main__title__container {
         .header__main__title {

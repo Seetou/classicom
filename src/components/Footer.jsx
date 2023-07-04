@@ -55,7 +55,7 @@ const FooterContainer = styled.footer`
         justify-content: space-evenly;
 
         img {
-          width: 250px;
+          width: 15rem;
         }
 
         .footer__liens {
@@ -97,6 +97,18 @@ const FooterContainer = styled.footer`
         color: white;
         font-weight: bold;
         text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 43.75em) {
+    .footer__container {
+      .footer {
+        .footer__content {
+          flex-direction: column;
+          gap: 4rem;
+          text-align: center;
+        }
       }
     }
   }

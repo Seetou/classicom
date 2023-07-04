@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { navlinks } from "../Datas/navlinks";
 import { COLORS } from "../../styles/colors";
+import { NavigationContext } from "../store/NavigationContextProvider";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Navigation = () => {
+  const { showMobileNav } = useContext(NavigationContext);
   return (
     <NavigationContainer>
       <div className="header__container --inner-container">
@@ -18,10 +21,15 @@ const Navigation = () => {
           <ul>
             {navlinks.map((link) => (
               <li key={link.id}>
-                <NavLink to={link.link}>{link.page}</NavLink>
+                <NavLink to={"/"}>{link.page}</NavLink>
               </li>
             ))}
           </ul>
+        </nav>
+        <nav className="mobile__nav">
+          <button>
+            <AiOutlineMenu />
+          </button>
         </nav>
       </div>
     </NavigationContainer>
@@ -74,6 +82,53 @@ const NavigationContainer = styled.header`
             }
           }
         }
+      }
+    }
+
+    .mobile__nav {
+      display: none;
+      button {
+        border: none;
+        background: ${COLORS.primaryColor};
+        font-weight: bold;
+        padding: 1rem;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border: 1px solid ${COLORS.primaryColor};
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background: ${COLORS.primaryColorDarker};
+          color: white;
+        }
+      }
+    }
+
+    .showMobileToggle {
+      display: block;
+    }
+  }
+
+  @media (max-width: 50em) {
+    .header__container {
+      justify-content: space-between;
+
+      .header__logo__container {
+        width: 50%;
+        img {
+          width: 100%;
+        }
+      }
+      .header__navigation__container {
+        display: none;
+      }
+
+      .mobile__nav {
+        display: block;
       }
     }
   }
